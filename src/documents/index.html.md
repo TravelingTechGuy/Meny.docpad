@@ -1,6 +1,7 @@
 ---
 layout: 'default'
-title: 'What now?'
+title: 'Meny Docpad?'
+header: 'Meny demo'
 ---
 
 ## Not sure what to do now? Here's some useful links:
