@@ -2,6 +2,7 @@
 layout: 'default'
 title: 'Meny Docpad'
 header: 'Meny demo'
+footer:
 ---
 
 This DocPad skeleton utilizes [Meny](https://github.com/hakimel/Meny) by Hakimel, 
