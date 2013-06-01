@@ -3,7 +3,7 @@
 	"version": "0.1.0",
 	"private": true,
 	"description": "Meny + HTML5 Boilerplate skeleton for DocPad",
-	"homepage": "https://github.com/lukekarrys/html5-boilerplate.docpad",
+	"homepage": "https://github.com/TravelingTechGuy/Meny.docpad",
 	"keywords": [
 		"docpad-skeleton",
 		"docpad",
@@ -15,11 +15,11 @@
 	],
 	"author": "Guy Vider (http://www.TravelingTechGuy.com)",
 	"bugs": {
-		"url": "https://github.com/lukekarrys/meny.docpad/issues"
+		"url": "https://github.com/TravelingTechGuy/Meny.docpad/issues"
 	},
 	"repository" : {
 		"type" : "git",
-		"url" : "http://github.com/lukekarrys/meny.docpad.git"
+		"url" : "http://github.com/TravelingTechGuy/Meny.docpad.git"
 	},
 	"engines" : {
 		"node": "0.10.x",
