@@ -1,6 +1,6 @@
 ---
 layout: 'default'
-title: 'Meny Docpad?'
+title: 'Meny Docpad'
 header: 'Meny demo'
 ---
 

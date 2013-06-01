@@ -46,13 +46,11 @@ a {
 
 h1,
 h2 {
-	font-size: 24px;
+	font-size: 18px;
 }
 
-,
 header {
 	font-size: 24px;
-	color: blue;
 }
 
 .meny {
@@ -169,5 +167,3 @@ header {
 		position: absolute;
 		bottom: 20px;
 	}
-
-

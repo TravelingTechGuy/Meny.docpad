@@ -1,8 +1,8 @@
 {
-	"name": "html5-boilerplate-frontend.docpad",
+	"name": "meny.docpad",
 	"version": "0.1.0",
 	"private": true,
-	"description": "HTML5 Boilerplate skeleton for DocPad. Bare essentials for building a modern website with best practices. Adds frontend plugins asset compilation.",
+	"description": "Meny + HTML5 Boilerplate skeleton for DocPad",
 	"homepage": "https://github.com/lukekarrys/html5-boilerplate.docpad",
 	"keywords": [
 		"docpad-skeleton",
@@ -13,24 +13,17 @@
 		"h5bp",
 		"grunt"
 	],
-	"author": "Bevry Pty Ltd <us@bevry.me> (http://bevry.me)",
-	"maintainers": [
-		"Luke Karrys (http://lukekarrys.com)"
-	],
-	"contributors": [
-		"Benjamin Lupton <b@lupton.cc> (http://balupton.com)",
-		"Luke Karrys (http://lukekarrys.com)"
-	],
+	"author": "Guy Vider (http://www.TravelingTechGuy.com)",
 	"bugs": {
-		"url": "https://github.com/lukekarrys/html5-boilerplate.docpad/issues"
+		"url": "https://github.com/lukekarrys/meny.docpad/issues"
 	},
 	"repository" : {
 		"type" : "git",
-		"url" : "http://github.com/lukekarrys/html5-boilerplate.docpad.git"
+		"url" : "http://github.com/lukekarrys/meny.docpad.git"
 	},
 	"engines" : {
-		"node": "0.8.x",
-		"npm": "1.1.x"
+		"node": "0.10.x",
+		"npm": "1.2.x"
 	},
 	"dependencies": {
 		"docpad": "6.x",
@@ -46,7 +39,7 @@
 		"underscore": "~1.4.3"
 	},
 	"devDependencies": {
-		"docpad-plugin-livereload": "2.x"
+		
 	},
 	"main": "node_modules/docpad/bin/docpad-server"
 }
