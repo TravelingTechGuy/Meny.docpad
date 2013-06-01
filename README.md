@@ -1,5 +1,5 @@
 # [Meny](https://github.com/hakimel/Meny) skeleton for [DocPad](https://github.com/bevry/docpad)
-Build a simple site/blog with a 3D transition menu.
+Build a simple site/blog with a 3D transition menu. Utilizes [DocPad HTML5Boilerplate skeleton](https://github.com/docpad/html5-boilerplate.docpad) as a start point.
 
 
 ## Getting Started
