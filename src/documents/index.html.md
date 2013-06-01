@@ -4,7 +4,9 @@ title: 'Meny Docpad'
 header: 'Meny demo'
 ---
 
-This DocPad skeleton utilizing [Meny](https://github.com/hakimel/Meny) by Hakimel, that section the page into 2 sections:
+This DocPad skeleton utilizing [Meny](https://github.com/hakimel/Meny) by Hakimel, 
+that sections the page into 2 sections:
+
 1. Content
 2. Menu
 
