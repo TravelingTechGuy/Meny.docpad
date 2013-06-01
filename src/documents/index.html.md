@@ -4,17 +4,20 @@ title: 'Meny Docpad'
 header: 'Meny demo'
 ---
 
-This DocPad skeleton utilizing [Meny](https://github.com/hakimel/Meny) by Hakimel, 
-that sections the page into 2 sections:
+This DocPad skeleton utilizes [Meny](https://github.com/hakimel/Meny) by Hakimel, 
+to add a 3D compact menu to your site.
 
-1. Content
-2. Menu
+## Features:
 
-To get to the menu, hover in the vicinity of the arrow.
-The menu can appear left/top/right/bottom.
-The width of the trigger area can be controlled as well.
+- To get to the menu, hover (or swipe on a mobile device) in the vertical vicinity of the arrow
+- The menu can be triggered programmatically (click <a href="#" id="open">here</a>)  
+- The menu can appear [left](?p=left)/[top](?p=top)/[right](?p=right)/[bottom](?p=bottom)
+- You can show the menu next to an external site in an iframe (try [this](?u=http://www.TravelingTechGuy.com))
+- The width of the trigger area can be controlled
 
-All parameters are in the script.js file.
+All parameters are available in the script.js file.
+
+
 
 ## Some useful links:
 

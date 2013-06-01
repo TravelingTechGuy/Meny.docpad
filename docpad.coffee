@@ -32,7 +32,7 @@ docpadConfig = {
 			keywords: """
 				place, your, website, keywoards, here, keep, them, related, to, the, content, of, your, website
 				"""
-			footer: "Created by Guy Vider 2013"
+			footer: "Guy Vider, <a href='http://www.TravelingTechGuy.com'>Traveling Tech Guy LLC</a> 2013 - feel free to copy and reuse!"
 
 
 		# -----------------------------
