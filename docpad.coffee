@@ -32,6 +32,7 @@ docpadConfig = {
 			keywords: """
 				place, your, website, keywoards, here, keep, them, related, to, the, content, of, your, website
 				"""
+			footer: "Created by Guy Vider 2013"
 
 
 		# -----------------------------
@@ -57,6 +58,10 @@ docpadConfig = {
 		getPreparedKeywords: ->
 			# Merge the document keywords with the site keywords
 			@site.keywords.concat(@document.keywords or []).join(', ')
+
+		getPreparedFooter: ->
+			# if we have a document footer, then we should use that, otherwise use the site's footer
+			@document.footer or @site.footer
 
 		getGruntedStyles: ->
 			_ = require 'underscore'

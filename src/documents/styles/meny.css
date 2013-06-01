@@ -9,6 +9,11 @@
  * @author Hakim El Hattab | http://hakim.se
  */
 
+/*@font-face {
+	src: url('http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic');
+	font-family: Lato;
+}*/
+
 * {
 	margin: 0;
 	padding: 0;
@@ -51,6 +56,17 @@ h2 {
 
 header {
 	font-size: 24px;
+	font-weight: 700;
+}
+
+footer {
+	display: block;
+	margin-top: 10px;
+	padding-top: 10px;
+	color: #333;
+	font-size: 0.85em;
+	border-top: 1px dashed #ccc;
+	-webkit-text-size-adjust: none;
 }
 
 .meny {
@@ -152,18 +168,4 @@ header {
 		margin: 10px 0 10px 0;
 		font-size: 16px;
 		line-height: 1.32;
-	}
-	.contents small {
-		display: block;
-		margin-top: 10px;
-		padding-top: 10px;
-		color: #333;
-		font-size: 0.85em;
-		border-top: 1px dashed #ccc;
-
-		-webkit-text-size-adjust: none;
-	}
-	.contents .sharing {
-		position: absolute;
-		bottom: 20px;
 	}
