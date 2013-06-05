@@ -3,13 +3,15 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Guy Vider -- Chief tinkerer -- @TravelTechGuy
 
 # THANKS
 
-    <name>
+    hakimel, balupton
 
 # TECHNOLOGY COLOPHON
 
     HTML5, CSS3
     jQuery, Modernizr
+    CoffeeScript, Grunt
+

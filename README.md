@@ -12,7 +12,7 @@ See th online demo [on Heroku](http://meny.herokuapp.com/).
 
 	``` bash
 	git clone git://github.com/TravelingTechGuy/Meny.docpad.git
-	cd Meny.docpad
+	cd docpad-meny
 	npm install
 	docpad run
 	```
