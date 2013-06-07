@@ -17,20 +17,24 @@ See th online demo [on Heroku](http://meny.herokuapp.com/).
 	docpad run
 	```
 
-1. [Open http://localhost:9778/](http://localhost:9778/)
+2. [Open http://localhost:9778/](http://localhost:9778/)
+
+
+## Changing the contents
 
 1. Start hacking away by modifying the `src` directory
-	1. The src/files/layouts/default.html.eco controls the 2 sections of the page
+	1. The [src/files/layouts/default.html.eco](https://github.com/TravelingTechGuy/Meny.docpad/blob/master/src/layouts/default.html.eco) controls the 2 sections of the page:
 		1. `meny` - the menu area
 		2. `contents` - the page contents, further divided into:
-			1. Header - can be provided on site/document level
-			2. Article - provided on the page level
-			3. Footer - can be provided on site/document level
-	2. The menu is built from src/files/layouts/menu.json, where you can select:
-		1. The name of the menu item
-		2. The class it'd have, if you want it different from the other items (leave empty otherwise)
-		3. The URL it'll point to
-		4. Whether to open the URL in a new page (deafult: false)
-2. Read the instructions in the [Meny repository](https://github.com/hakimel/Meny) to change the parameters and look-and-feel.
+			1. `header` - can be provided on site/document level
+			2. `article` - provided on the page level (see [src/documents/index.html.md](https://github.com/TravelingTechGuy/Meny.docpad/blob/master/src/documents/index.html.md))
+			3. `footer` - can be provided on site/document level
+	2. The menu is built from [src/files/layouts/menu.json](https://github.com/TravelingTechGuy/Meny.docpad/blob/master/src/layouts/menu.json), where you can select:
+		1. `title` - the title at the head of the menu
+		2. `name` - name of the menu item
+		3. `class` - if you want it different the item from the other items (leave empty otherwise)
+		4. `url` - the URL it points to
+		5. `newPage` - Whether to open the URL in a blank page (deafult: false)
+2. Check out the [Meny repository](https://github.com/hakimel/Meny) to futher control the Meny look-and-feel.
 
 See [LICENSE.md](https://github.com/TravelingTechGuy/Meny.docpad/blob/master/LICENSE.md) file for full license info.
