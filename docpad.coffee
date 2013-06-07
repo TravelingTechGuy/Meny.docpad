@@ -12,16 +12,15 @@ docpadConfig = {
 		# Specify some site properties
 		site:
 			# The production url of our website
-			url: "http://website.com"
+			url: "http://meny.herokuapp.com"
 
 			# Here are some old site urls that you would like to redirect from
 			oldUrls: [
-				'www.website.com',
-				'website.herokuapp.com'
+				'meny.herokuapp.com'
 			]
 
 			# The default title of our website
-			title: "Your Website"
+			title: "Meny DocPad"
 
 			# The website description (for SEO)
 			description: """
@@ -85,6 +84,24 @@ docpadConfig = {
 			_.map scripts, (value) ->
 				return value.replace 'out', ''
 
+		getMenu: ->
+			_ = require 'underscore'
+			menu = require('./src/layouts/menu.json')
+			result = '<h2>' + menu.title + '</h2>\n'
+			result = result.concat '<ul>\n'
+			_.each menu.items, (item, key) ->
+				result = result.concat '<li'
+				if item.class != ''
+					result = result.concat ' class="' + item.class + '">'
+				else
+					result = result.concat '>'
+				result = result.concat '<a href="' + item.url + '"'
+				if item.newPage
+					result = result.concat ' target="_blank"'
+				result = result.concat '>' + item.name + '</a>'
+				result = result.concat '</li>\n'
+			result = result.concat '</ul>\n'
+			return result
 
 	# =================================
 	# DocPad Events
