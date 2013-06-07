@@ -27,7 +27,7 @@ See th online demo [on Heroku](http://meny.herokuapp.com/).
 		1. `meny` - the menu area
 		2. `contents` - the page contents, further divided into:
 			1. `header` - can be provided on site/document level
-			2. `article` - provided on the page level (see [src/documents/index.html.md](https://github.com/TravelingTechGuy/Meny.docpad/blob/master/src/documents/index.html.md))
+			2. `article` - provided on the page level (e.g. [src/documents/index.html.md](https://github.com/TravelingTechGuy/Meny.docpad/blob/master/src/documents/index.html.md))
 			3. `footer` - can be provided on site/document level
 	2. The menu is built from [src/files/layouts/menu.json](https://github.com/TravelingTechGuy/Meny.docpad/blob/master/src/layouts/menu.json), where you can select:
 		1. `title` - the title at the head of the menu
