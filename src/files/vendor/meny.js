@@ -1,5 +1,5 @@
 /*!
- * meny 1.2
+ * meny 1.3
  * http://lab.hakim.se/meny
  * MIT licensed
  *
@@ -41,7 +41,9 @@ var Meny = {
 				threshold: 40,
 				overlap: 6,
 				transitionDuration: '0.5s',
-				transitionEasing: 'ease'
+				transitionEasing: 'ease',
+				mouse: true,
+				touch: true
 			};
 
 			// Cache references to DOM elements
@@ -80,17 +82,25 @@ var Meny = {
 				contentsAnimation,
 				coverAnimation;
 
-			// Extend the default config object with the passed in
-			// options
-			Meny.extend( config, options );
+			configure( options );
 
-			setupPositions();
-			setupWrapper();
-			setupCover();
-			setupMenu();
-			setupContents();
+			/**
+			 * Initializes Meny with the specified user options,
+			 * may be called multiple times as configuration changes.
+			 */
+			function configure( o ) {
+				// Extend the default config object with the passed in
+				// options
+				Meny.extend( config, o );
 
-			bindEvents();
+				setupPositions();
+				setupWrapper();
+				setupCover();
+				setupMenu();
+				setupContents();
+
+				bindEvents();
+			}
 
 			/**
 			 * Prepares the transforms for the current positioning
@@ -176,6 +186,10 @@ var Meny = {
 			 * Meny is open.
 			 */
 			function setupCover() {
+				if( dom.cover ) {
+					dom.cover.parentNode.removeChild( dom.cover );
+				}
+
 				dom.cover = document.createElement( 'div' );
 
 				// Disabled until a falback fade in animation is added
@@ -273,14 +287,28 @@ var Meny = {
 			 * Attaches all input event listeners.
 			 */
 			function bindEvents() {
+
 				if( 'ontouchstart' in window ) {
-					Meny.bindEvent( document, 'touchstart', onTouchStart );
-					Meny.bindEvent( document, 'touchend', onTouchEnd );
+					if( config.touch ) {
+						Meny.bindEvent( document, 'touchstart', onTouchStart );
+						Meny.bindEvent( document, 'touchend', onTouchEnd );
+					}
+					else {
+						Meny.unbindEvent( document, 'touchstart', onTouchStart );
+						Meny.unbindEvent( document, 'touchend', onTouchEnd );
+					}
 				}
 
-				Meny.bindEvent( document, 'mousedown', onMouseDown );
-				Meny.bindEvent( document, 'mouseup', onMouseUp );
-				Meny.bindEvent( document, 'mousemove', onMouseMove );
+				if( config.mouse ) {
+					Meny.bindEvent( document, 'mousedown', onMouseDown );
+					Meny.bindEvent( document, 'mouseup', onMouseUp );
+					Meny.bindEvent( document, 'mousemove', onMouseMove );
+				}
+				else {
+					Meny.unbindEvent( document, 'mousedown', onMouseDown );
+					Meny.unbindEvent( document, 'mouseup', onMouseUp );
+					Meny.unbindEvent( document, 'mousemove', onMouseMove );
+				}
 			}
 
 			/**
@@ -459,7 +487,7 @@ var Meny = {
 				var isOverContent = ( config.position === POSITION_T && touchStartY > config.height ) ||
 									( config.position === POSITION_R && touchStartX < dom.wrapper.offsetWidth - config.width ) ||
 									( config.position === POSITION_B && touchStartY < dom.wrapper.offsetHeight - config.height ) ||
-									( config.position === POSITION_L && touchStartX < config.width );
+									( config.position === POSITION_L && touchStartX > config.width );
 
 				if( isOverContent ) {
 					close();
@@ -514,6 +542,8 @@ var Meny = {
 			/// API: ///////////////////////////////////
 
 			return {
+				configure: configure,
+
 				open: open,
 				close: close,
 
